@@ -204,3 +204,46 @@ a {
     filter: none;
     transition: filter 0.2s;
 }
+
+.table-help {
+    height: 500px;
+    background-color: var(--darkgrey);
+}
+
+.search-bar-container {
+    position: sticky;
+    top: 100px;
+    background-color: var(--darkgrey-);
+    padding: 10px;
+    z-index: 100;
+}
+
+#search-bar {
+    border-style: none;
+    width: 95%;
+    height: 30px;
+    padding-left: 5px;
+    margin-inline: 2.5vw;
+    font-size: large;
+    font-weight: 600;
+}
+
+.highlight {
+    background-color: var(--aqua);
+}
+
+.term {
+    padding: 20px;
+    border-bottom: 1px solid var(--darkgrey-);
+}
+
+.searchable {
+    font-size: x-large;
+}
+
+.term-text{
+    color: white;
+    font-family: "Nunito";
+    padding-top: 10px;
+    font-size: larger;
+}
