@@ -77,6 +77,7 @@ header {
 
 @media screen and (max-width: 768px) {
     header {
+        text-align: center;
         position: relative;
         flex-direction: column;
         h1 {
@@ -117,27 +118,28 @@ header {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }
+}
   
-  .dropdown-content a:hover {background-color: var(--darkgrey-)}
+.dropdown-content a:hover {background-color: var(--darkgrey-)}
   
-  .dropdown:hover .dropdown-content {display: grid; grid-template-rows: repeat(4, 40px); grid-template-columns: repeat(6, 120px);}
+.dropdown:hover .dropdown-content {display: grid; grid-template-rows: repeat(4, 40px); grid-template-columns: repeat(6, 120px);}
 
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .dropdown-content {
-        right: -270px;
-        font-size: medium;
+        right: -30vw;
+        a {
+            font-size: larger;
+        }
     }
 
-    .dropdown:hover .dropdown-content {display: grid; grid-template-rows: repeat(6, 50px); grid-template-columns: repeat(4, 160px);}
+    .dropdown:hover .dropdown-content {display: grid; grid-template-rows: repeat(6, 50px); grid-template-columns: repeat(4, 20vw);}
 }
 @media screen and (max-width: 425px) {
     .dropdown-content {
-        right: -160px;
-        font-size: medium;
+        right: -37.6vw;
     }
 
-    .dropdown:hover .dropdown-content {display: grid; grid-template-rows: repeat(8, 60px); grid-template-columns: repeat(3, 142px);}
+    .dropdown:hover .dropdown-content {display: grid; grid-template-rows: repeat(8, 60px); grid-template-columns: repeat(3, 33.3vw);}
 }
 
 
@@ -243,10 +245,20 @@ a {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .card {
+        width: 180px;
+        height: 216px;
+    }
+}
+
 @media screen and (max-width: 425px) {
     .card {
-        width: 160px;
-        height: 200px;
+        width: 35vw;
+        height: 42vw;
+        a h4 {
+            font-size: 48px;
+        }
     }
 }
 
@@ -262,10 +274,16 @@ a {
 
 .search-bar-container {
     position: sticky;
-    top: 100px;
+    top: 90px;
     background-color: var(--darkgrey-);
     padding: 10px;
-    z-index: 100;
+    z-index: 2;
+}
+
+@media screen and  (max-width: 768px){
+    .search-bar-container {
+        top: 0;
+    }
 }
 
 #search-bar {
@@ -296,4 +314,25 @@ a {
     font-family: "Nunito";
     padding-top: 10px;
     font-size: larger;
+}
+
+@media screen and (max-width: 768px) {
+    .background-portrait {
+        position: absolute;
+        width: 100%;
+        height: 25vh;
+        margin: 0;
+        padding: 0;
+        background-size: cover;
+        background-position-y: -50px;
+    }
+
+    .navigation-btn {
+        width: 50%;
+        z-index: 1;
+    }
+
+    .DataTable {
+        overflow-x: scroll;
+    }
 }
