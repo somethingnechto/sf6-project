@@ -335,4 +335,19 @@ a {
     .DataTable {
         overflow-x: scroll;
     }
+    
+    .info-text {
+        text-align: center;
+        padding-inline: 30px;
+     }   
+    .images-div {
+        display: grid;
+        grid-template-rows: repeat(4, 25vh);
+    }
+    
+    .info-image {
+        height: auto;
+        width: 80vw;
+        margin: 8vw;
+    }
 }
