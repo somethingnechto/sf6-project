@@ -53,51 +53,178 @@
     </header>
     <main>
         <div class="table-help">
+            <h1>Нотация</h1>
+            <p class="table-help-text">В файтингах использвуется различная нотация, но самая распространенная и использвующаяся на этом сайте - <span>NumPad нотация.</span></p>
+            <p class="table-help-text">В данной нотации кнопки направления обозначены цифрами на стандартной раскладке NumPad клавиатуры. 
+                (Если у вас нет NumPad - представьте экран набора номера на телефоне
+                или домофон.) Например, 2 - вниз, 6 - вправо, 5 - никакое направление не нажато.
+            </p>
+            <p class="table-help-text">Кнопки атаки обозначены двумя буквами - сила удара (L - слабый, M - средний, H - сильный) и тип удара (P - удар рукой, K - удар ногой).</p>
+            <p class="table-help-text">Спецприемы записываются комбинацией направлений и атаки: 236LP - вниз, вниз-вперед, вперед + слабый удар.
+                 (На персонаже <a href="./character/ryu/main.html">Ryu</a> выпускает слабую версию Hadouken.)</p>
             
+            <h1>Справка для таблицы с фрейм-датой</h1>
+            <p class="table-help-text">Здесь по порядку представлено значение каждого стандартного столбца в таблицах с фрейм-датой персонажей.</p>
+            <p class="table-help-text"><span>Прием</span> - в NumPad нотации указано сочетание клавиш для того или иного приема.</p>
+            <p class="table-help-text"><span>S</span> - Startup, количество кадров, которое занимает начало приема после нажатия комбинации клавиш.</p>
+            <p class="table-help-text"><span>A</span> - Active, количество активных кадров приема, кадров в течение которых прием может нанести урон.</p>
+            <p class="table-help-text"><span>R</span> - Recovery, количество кадров, которые занимает восстановление персонажа после применения приема.</p>
+            <p class="table-help-text"><span>oH</span> - on hit, показывает, на сколько кадров персонаж сможет быстрее или медленнее действовать при попадании
+            приема в противника. (Например, если удар имеет +7 oH, то персонаж игрока восстановится на 7 кадров раньше и сможет нажать прием, начало которого занимает 7 кадров
+        или меньше, сделав тем самым комбо.) KD означает, что персонаж противника упадет на землю в состояние сбивания, HKD означает то же самое, но противник
+    не сможет сделать кувырок назад при восстановлении после такого типа удара.</p>
+            <p class="table-help-text"><span>oB</span> - on block, показывает, на сколько кадров персонаж сможет быстрее или медленнее действовать при блокировании
+                приема противником.</p>
+            <p class="table-help-text"><span>onPC</span> - on Punish Counter, показывает, на сколько кадров персонаж сможет быстрее или медленнее действовать при
+            наказании противника приемом. (Crumple означает, что персонаж противника упадет на колени, Tumble - что персонаж противника покатится
+        по земле при попадании, Wall Bounce - что персонаж противника отскочит от стены и вернется назад.)</p>
+            <p class="table-help-text"><span>xx</span> - cancel, показывает, во что можно отменить прием: ch - в самого себя, sp - в особый прием, su - в суперудар, 
+            su1, su2, su3 - в суперудар 1, 2 или 3 уровня соответственно.</p>
+            <p class="table-help-text"><span>dmg</span> - damage, урон приема при попадании.</p>
+            <p class="table-help-text"><span>lvl</span> - level, показывает, как нужно блокировать атаку: 
+                H - любой блок, L - низкий блок, M - верхний блок, T - бросок, нельзя заблокировать.</p>
+            <p class="table-help-text"><span>DRC-oH</span> - Drive Rush cancel on hit, показывает, на сколько кадров персонаж сможет быстрее или медленнее действовать при попадании
+                приема в противника и последующей отмене в Drive Rush.</p>
+            <p class="table-help-text"><span>DRC-oB</span> - Driver Rush Cancel on Block, показывает, на сколько кадров персонаж сможет быстрее или медленнее действовать при блокировании
+                приема противником и последующей отмене в Drive Rush.</p>
         </div>
         <div class="glossary">
             <div class="search-bar-container"><input type="text" id="search-bar" placeholder="Введите искомый термин..." onkeyup="performSearch()"></div>
             <div class="term">
-                <h3 class="searchable">Заголовок 1</h3>
-                <p class="term-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h3 class="searchable">Burnout</h3>
+                <p class="term-text">Состояние персонажа, которое наступает, когда шкала Drive равна нулю. До восстановления шкалы нельзя использовать Drive-техники
+                    и все приемы противника получают дополнительные кадры на блоке.
+                </p>
             </div>
             <div class="term">
-                <h3 class="searchable">Заголовок 2</h3>
-                <p class="term-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h3 class="searchable">Dragon Punch (DP)</h3>
+                <p class="term-text">Особый прием, который наносит урон, перемещая персонажа вверх и имеет иммунитет к атакам с воздуха, что делает его отличным
+                    средством против прыжков противника.
+                </p>
             </div>
             <div class="term">
-                <h3 class="searchable">Заголовок 3</h3>
-                <p class="term-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h3 class="searchable">Drive</h3>
+                <p class="term-text">Особая шкала, которая состоит из 6 полосок и позволяет использовать Drive-техники. Накапливается при ходьбе вперед и нанесении ударов,
+                    а тратится при блокировании ударов и использовании Drive-техник.
+                </p>
             </div>
             <div class="term">
-                <h3 class="searchable">Заголовок 4</h3>
-                <p class="term-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h3 class="searchable">Drive Impact</h3>
+                <p class="term-text">HP+HK. Сильный удар, обладающий броней на три удара и дающий огромное преимущество при попадании карающей контратакой. При блокировании в углу
+                    впечатывает противника в стену. Стоит 1 полоску Drive и может быть наказан ответным Drive Impact от противника.
+                </p>
             </div>
             <div class="term">
-                <h3 class="searchable">Заголовок 5</h3>
-                <p class="term-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h3 class="searchable">Drive Parry</h3>
+                <p class="term-text">MP+MK. Особое состояние, постоянно тратящее шкалу Drive и позволяющее блокировать любые типы атак вне зависимости от уровня, 
+                    попутно восстанавливая шкалу Drive с каждой заблокированной атакой. При захвате персонажа в состоянии парирования бросок является карающей контроатакой.
+                    При парировании атаки в течение 2 кадров до ее попадания персонаж совершает Perfect Parry, восстанавливая дополнительную шкалу Drive и позволяющую ему 
+                    атаковать моментально, давая неуязвимость на 6 кадров. Perfect Parry уменьшает наносимый урон на 50%.
+                </p>
             </div>
             <div class="term">
-                <h3 class="searchable">Заголовок 6</h3>
-                <p class="term-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h3 class="searchable">Drive Reversal</h3>
+                <p class="term-text">6HP+HK. Особая техника, позвояющая в обмен на 2 шкалы Drive выйти из состояния блокирования и отбросить врага. Наказуема при блокировании.
+                    Также может быть применена при восстановлении.
+                </p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Drive Rush</h3>
+                <p class="term-text">66MP+MK. Особая техника, позволяющая за 1 шкалу Drive побежать на оппонента и усилить слудующий прием, давая ему +4 кадра при попадании или
+                    блокировании. Также некоторые приемы можно за 3 шкалы Drive отменить в Drive Rush для продолжения комбо или давления на врага.
+                </p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Overdrive</h3>
+                <p class="term-text">Усиление особого приема, осуществлсяемое за 2 шкалы Drive при нажании двух кнопок удара рукой или ногой при использовании приема.</p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Бафферинг (Buffering)</h3>
+                <p class="term-text">Техника ввода направлений для спецприема, не нажимая кнопку атаки, пока противник не совершит какое-либо действие. Позволяет
+                    быстро реагировать на дествие противника, если ожидаешь, что он совершит что-то предстказуемое.
+                </p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Броня (Armor)</h3>
+                <p class="term-text">Свойство приема, позволяющее во время его применения поглотить несколько ударов без получения урона и сбрасывания атаки.</p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Вифф/промах (Whiff)</h3>
+                <p class="term-text">Промах кнопкой, оставляющий персонажа открытым для наказания.</p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Зарядка (Charge)</h3>
+                <p class="term-text">Свойство некоторых приемов, которе требует удерживания кнопки направления определенное количество кадров для ввода приема.</p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Захват/бросок (Grab)</h3>
+                <p class="term-text">LP+LK. Прием, который позволяет нанести урон противнику, минуя блок. Может быть отражен, если противник одновременно нажмет свой бросок
+                    в течение нескольких кадров.
+                </p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Карающая контратака (Punish Counter)</h3>
+                <p class="term-text">Состояние приема при попадании в противника во время кадров его восстановления.</p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Командный захват/бросок (Command grab)</h3>
+                <p class="term-text">Бросок, который осуществляется вводом команды из нескольких кнопок, обладающий особыми свойствами. Не может быть отражен.</p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Конверсия (Conversion)</h3>
+                <p class="term-text">Умение игрока превратить случайное попадание ударом в полноценное комбо, оптимальное для текущей ситуации.</p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Контратака (Counter)</h3>
+                <p class="term-text">Состояние приема при попадании в противника во время кадров начала приема. Обычно дает +2 кадра на попадании.</p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Линк (Link)</h3>
+                <p class="term-text">Техника при которой два приема могут сделать комбо, если второй попадет быстрее, чем проивник восстановится после первого.</p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Нейтрал (Neutral)</h3>
+                <p class="term-text">Состояние игры, в которой ни один из игроков не имеет позиционного преимущества над соперником. Чаще всего центр арены на средней дистанции.</p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Нормал (Normal)</h3>
+                <p class="term-text">Обычный прием, совершаемый при нажатии одной кноки атаки и одного направления.</p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Огненный шар (Fireball)</h3>
+                <p class="term-text">Снаряд, двигающийся вперед по экрану и наносящий урон при попадании.</p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Окиземе (Okizeme)</h3>
+                <p class="term-text">Состояние игры, когда противник лежит на земле и можно совершитб какие-либо действия, чтобы застать его врасплох при восстановлении.</p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Отмена (Cancel)</h3>
+                <p class="term-text">Техника комбо двух приемов, позволяющая начать выполнять второй прием до завершения восстановления первого,
+                    как-бы "отменяя" его.
+                </p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Рекка (Rekka)</h3>
+                <p class="term-text">Особый прием, который можно продолжить при нажатии дополнительных сочетаний клавиш.</p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Сбивание/восстановление (Knockdown/Wakeup)</h3>
+                <p class="term-text">Состояние игры, при котором противник лежит на земле после попадания в него приема и не может получать урон. Персонаж
+                    может восстановиться на месте или сделать кувырок назад для набора дистанции.
+                </p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Фрейм/кадр (Frame)</h3>
+                <p class="term-text">Единица времени игры, равная 1/60 секунды.</p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Хит-конферм (Hit-confirm)</h3>
+                <p class="term-text">Умение игрока на реакции отменить попадание приема в другой прием или суперудар.</p>
+            </div>
+            <div class="term">
+                <h3 class="searchable">Чип-урон (Chip Damage)</h3>
+                <p class="term-text">Урон, который получает противник про блокировании специальных приемов в состаянии Burnout.</p>
             </div>
         </div>
     </main>
